@@ -1,0 +1,356 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+hr{
+  border-bottom: 1px solid;
+}
+header{
+    position: fixed;
+    top:0; left:0;
+    width:100%;
+    background:#000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding:2rem 9%;
+    display: flex;
+    color: darkgrey;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    
+}
+
+header .logo{
+    font-size: 3rem;
+    color:darkgrey;
+    margin-right: 5rem;
+    margin-left:0rem;
+}
+header .logo img{
+  width:45px;
+  height:40px;
+}
+
+ i{
+  color: red;
+  font-size: 3rem;
+}
+ 
+
+header .navbar a{
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color:var(--purple);
+}
+
+header .navbar a:hover{
+    color:var(--pink);
+}
+
+header input:not(.search){
+    display: none;
+}
+
+header input.search{
+  background:darkgrey;
+  color:whitesmoke;
+  width:100%;
+  height:32px;
+  padding:5px;
+  margin-bottom:15px;
+  font-size: 16px;
+  
+  border-radius:4px;
+}
+header label{
+    font-size: 3rem;
+    color:var(--purple);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+.red{
+  color:red;
+}
+
+.container{
+  margin-top: 100px;
+  text-align: center;
+}
+.container img{
+  width:95%;
+  margin-top:30px;
+}
+.container h1{
+  font-size: 4rem;
+}
+.container p{
+  font-size:20px;
+  margin:10px;
+}
+.container .grey{
+  color:darkgrey;
+  font-size: 18px;
+}
+.container a{
+  margin:10px;
+  margin-bottom:20px;
+  font-size:16px;
+}
+
+.pro,.series,.airpod,.i-14{
+    background-color:#000;
+}
+
+.pro h1,.series h1,.airpod h1,.i-14 h1{
+    color:#fff;
+}
+
+.container div{
+    padding-top:25px;
+    margin-top:15px;
+}
+
+
+
+
+
+.swiper{
+
+width: 100%;
+
+height: fit-content;
+
+}
+
+.swiper-slide img{
+
+width: 99%;
+height:250px;
+
+
+}
+.paragraph{
+  font-size: 1.5rem;
+  line-height:20px;
+  width: 99%;
+  padding:8px;
+  margin-top: 20px;
+  background: whitesmoke;
+  font-weight: 300;
+}
+
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border:none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  
+  overflow: hidden;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2716"; /* Unicode character for "minus" sign (-) */
+  font-size:13px;
+}
+.section{
+  margin-top:25px;
+}
+
+.section p{
+  font-size: 18px;
+  padding:8px;
+  margin-top: 20px;
+}
+
+.section button{
+  font-size: 20px;
+  margin-top:0px;
+}
+
+footer p{
+  font-size: 1.5rem;
+  line-height:20px;
+  width: 99%;
+  padding:8px;
+  margin-top: 20px;
+  background: whitesmoke;
+  font-weight: 300;
+}
+
+.terms{
+  display:flex;
+  list-style: none;
+  font-size:1.5rem;
+  padding: 8px;
+ 
+}
+.terms a{
+  margin: 4px;
+  color:darkgrey;
+}
+
+.made{
+  font-weight:600;
+  font-size: 2rem;
+}
+
+
+
+
+
+
+
+@media (max-width:768px){
+
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left: 0;
+        width:100%;
+        height:100vh;
+        background:#000;
+        padding:1rem 2rem;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    header .navbar a{
+        display: block;
+        margin:2rem 0rem;
+        font-size: 2rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before{
+        content:'\f00d';
+    }
+}
+@media (min-width:480px){
+     
+   .none{
+     display: none;
+   }
+  nav hr{
+     display: none;
+   }
+   .search{
+     display:none
+   }
+   .ipad,.pro,.i-14,.airpod,.card,.i-fourteen,.apple-ex,.ultra-watch,.series{
+     width:50%;
+     
+     
+   }
+   .container .things{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
+   .container .things .app{
+     flex:1 1 30rem;
+    background:;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin:.5rem;
+    padding:3rem 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    transition: .2s linear;
+   }
+   .container img{
+     height:200px;
+     width:300px;
+   }
+   .swiper-slide img{
+
+width: 99%;
+height:450px;
+
+}
+footer{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+footer p{
+  font-size: 2rem;
+  line-height:25px;
+  width: 99%;
+  padding:8px;
+  margin-top: 20px;
+  background: whitesmoke;
+  font-weight: 300;
+}
+
+
+.terms{
+  display:flex;
+  list-style: none;
+  font-size:2rem;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.terms a{
+  margin: 10px;
+  color:darkgrey;
+}
+
+}
