@@ -352,5 +352,13 @@ footer p{
   margin: 10px;
   color:darkgrey;
 }
+    .swiper-slide img{
+        
+
+width: 60%;
+height:250px;
+
+
+}
 
 }
